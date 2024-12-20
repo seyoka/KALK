@@ -19,7 +19,12 @@ export default function Home() {
     <NavbarBrand
       className="text-2xl font-bold text-white cursor-pointer"
       style={{ fontFamily: "Major Mono Display, monospace" }}
-      onClick={() => document.getElementById("home").scrollIntoView({ behavior: "smooth" })}
+      onClick={() => {
+        const homeElement = document.getElementById("home");
+        if (homeElement) {
+          homeElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }}
     >
       Kalk
     </NavbarBrand>
@@ -27,28 +32,48 @@ export default function Home() {
       <Button
         variant="ghost"
         className="text-white hover:text-gray-400"
-        onClick={() => document.getElementById("features").scrollIntoView({ behavior: "smooth" })}
+        onClick={() => {
+          const featuresElement = document.getElementById("features");
+          if (featuresElement) {
+            featuresElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
       >
         Features
       </Button>
       <Button
         variant="ghost"
         className="text-white hover:text-gray-400"
-        onClick={() => document.getElementById("pricing").scrollIntoView({ behavior: "smooth" })}
+        onClick={() => {
+          const pricingElement = document.getElementById("pricing");
+          if (pricingElement) {
+            pricingElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
       >
         Pricing
       </Button>
       <Button
         variant="ghost"
         className="text-white hover:text-gray-400"
-        onClick={() => document.getElementById("getting-started").scrollIntoView({ behavior: "smooth" })}
+        onClick={() => {
+          const gettingStartedElement = document.getElementById("getting-started");
+          if (gettingStartedElement) {
+            gettingStartedElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
       >
         Getting Started
       </Button>
       <Button
         variant="default"
         className="bg-white text-black hover:bg-gray-200"
-        onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
+        onClick={() => {
+          const contactElement = document.getElementById("contact");
+          if (contactElement) {
+            contactElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
       >
         Contact
       </Button>
